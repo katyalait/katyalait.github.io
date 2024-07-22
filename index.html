@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatWith</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+        header .title {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        header .beta {
+            background-color: #000;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 0.8em;
+        }
+        main {
+            padding: 20px;
+        }
+        .influencer-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .influencer-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .influencer-item img {
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1205445354213204',
+      xfbml      : true,
+      version    : 'v20.0'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+    <header>
+        <div class="title">[ChatWith]</div>
+        <div class="beta">BETA</div>
+    </header>
+    <main>
+        <p>Chat with your most trusted skincare influencers to get personalised product recommendations</p>
+        <ul class="influencer-list">
+            <li class="influencer-item">
+                <div class="influencer-info">
+                    <img src="" alt="Influencer 1" width="50" height="50">
+                    <div>Influencer 1</div>
+                    <div>12k</div>
+                </div>
+                <div class="menu">
+                    <button>...</button>
+                </div>
+            </li>
+            <li class="influencer-item">
+                <div class="influencer-info">
+                    <img src="" alt="Influencer 2" width="50" height="50">
+                    <div>Influencer 2</div>
+                    <div>12k</div>
+                </div>
+                <div class="menu">
+                    <button>...</button>
+                </div>
+            </li>
+            <li class="influencer-item">
+                <div class="influencer-info">
+                    <img src="" alt="Influencer 3" width="50" height="50">
+                    <div>Influencer 3</div>
+                    <div>12k</div>
+                </div>
+                <div class="menu">
+                    <button>...</button>
+                </div>
+            </li>
+        </ul>
+    </main>
+</body>
+</html>
